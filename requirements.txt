@@ -1,0 +1,8 @@
+Bootstrap-Flask
+gunicorn==20.1.0
+pylint==2.13.8
+pyparsing==3.0.8
+pytest==7.1.2
+pytest-cov==3.0.0
+pytest-pylint==0.18.0
+flask_bootstrap

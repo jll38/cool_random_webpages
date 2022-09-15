@@ -1,0 +1,25 @@
+header{
+    box-shadow: black 0px 2px 2px
+}
+
+nav{
+    font-size:2em;
+}
+
+h1{
+    font-family: "Prompt";
+    text-align:center;
+    font-size:250%;
+    font-weight: normal;
+}
+body {
+    margin:auto;
+}
+.main {
+    background:#eee;
+}
+
+#outputLabel{
+    font-size:2em;
+    font-family: "Prompt";
+}

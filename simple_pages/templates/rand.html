@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container-fluid" id="main"></div>
+    <div class="form-group">
+        <output id="outputLabel">Generate a random number between 0 and 50</output>
+        <form name="randomNum">
+            <div name="inputs">
+                <label for="range">0</label>
+                <input id="range" type="range" min="0" max="100" oninput="setSliderVal()">
+                <label for="range">100</label>
+            </div>
+            <div name="button">
+                <input class="btn btn-primary mb-2" type="button" value="Generate Random Number" onclick="rand()">
+            </div>
+            <output id="randomNumOutput"></output>
+        </form>
+    </div>
+
+    <script>
+        function getSliderVal() {
+            var slider = document.getElementById('range');
+            return slider.value
+        }
+
+        function setSliderVal() {
+            let x = getSliderVal()
+            document.getElementById('outputLabel').innerHTML = "Generate a random number between 0 and " + x
+            console.log(x)
+        }
+
+        function rand() {
+            let x = Math.round(Math.random() * getSliderVal());
+            event.preventDefault();
+            document.getElementById('randomNumOutput').innerHTML = x;
+            console.log(x)
+        }
+    </script>
+
+{% endblock %}
