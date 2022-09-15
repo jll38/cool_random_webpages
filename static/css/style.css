@@ -1,10 +1,20 @@
 header{
-    box-shadow: black 0px 2px 2px
 }
 
 nav{
     font-size:2em;
 }
+.center {
+  margin: auto;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 @font-face {
   font-family: "WILD WORLD";
     src: url('/static/fonts/WILD WORLD.otf');
@@ -14,6 +24,13 @@ h1{
     text-align:center;
     font-size:250%;
     font-weight: normal;
+    color:white
+}
+
+h2{
+    font-family:"WILD WORLD";
+    text-align:center;
+
 }
 body {
     margin:auto;
@@ -31,7 +48,8 @@ body {
 }
 .main {
     padding-top:10em;
-    padding-top:10em;
+    padding-bottom:10em;
+    background-color:#ebd7d5;
 }
 
 #outputLabel{
