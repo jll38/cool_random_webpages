@@ -14,7 +14,10 @@ nav{
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
+.grid-center{
+    display:grid;
+    place-items:center;
+}
 @font-face {
   font-family: "WILD WORLD";
     src: url('/static/fonts/WILD WORLD.otf');
@@ -57,8 +60,17 @@ body {
     text-align:center;
     font-family: "Prompt";
     display:block;
+    animation: fadeIn 0.5s;
 
 }
+#randomNumOutput{
+    font-family:"Prompt";
+    font-size:3em;
+}
+#randomNumOutput:active{
+    animation: fadeIn 0.5s;
+}
+
 
 .center {
   margin: auto;
