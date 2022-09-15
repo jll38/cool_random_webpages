@@ -5,9 +5,12 @@ header{
 nav{
     font-size:2em;
 }
-
+@font-face {
+  font-family: "WILD WORLD";
+    src: url('/static/fonts/WILD WORLD.otf');
+}
 h1{
-    font-family: "Prompt";
+    font-family: "WILD WORLD";
     text-align:center;
     font-size:250%;
     font-weight: normal;
@@ -16,7 +19,10 @@ body {
     margin:auto;
     animation: fadeIn 0.5s;
 }
-
+.subtext{
+    font-family: "Prompt";
+    text-align:center
+}
 @keyframes fadeIn {
   0% { opacity: 0;}
   100% { opacity: 1; }
