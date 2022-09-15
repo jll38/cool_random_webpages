@@ -21,14 +21,17 @@ body {
 }
 .subtext{
     font-family: "Prompt";
-    text-align:center
+    text-align:center;
+    font-size:200%;
+    font-weight: normal;
 }
 @keyframes fadeIn {
   0% { opacity: 0;}
   100% { opacity: 1; }
 }
 .main {
-    background:#eee;
+    padding-top:10em;
+    padding-top:10em;
 }
 
 #outputLabel{
