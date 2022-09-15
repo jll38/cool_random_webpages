@@ -1,13 +1,11 @@
 from flask import Flask
 from simple_pages import simple_pages
 from flask_bootstrap import Bootstrap
-def create_app():
-    app = Flask(__name__)
 
-    app.register_blueprint(simple_pages)
+app = Flask(__name__)
 
-    return app
+app.register_blueprint(simple_pages)
 
-
-
+if __name__ == '__main__':
+    app.run()
 
