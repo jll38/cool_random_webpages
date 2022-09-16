@@ -1,26 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="container-fluid" id="main"></div>
-    <div class="form-group" class="center">
-        <output id="outputLabel">Generate a random number between 0 and 50</output>
-        <form name="randomNum" class="center">
-            <div name="inputs">
-                <label for="range">0</label>
-                <input id="range" type="range" min="0" max="100" oninput="setSliderVal()">
-                <label for="range">100</label>
-            </div>
-            <div name="button">
-                <input class="btn btn-primary mb-2" type="button" value="Generate Random Number" onclick="rand()">
-            </div>
-            <output id="randomNumOutput">0</output>
-            <div name="buttontestinc">
-                <input class="btn btn-primary mb-2" type="button" value="Increment" onclick="increment()">
-            </div>
-            <div name="buttontestdec">
-                <input class="btn btn-primary mb-2" type="button" value="Decrement" onclick="decrement()">
-            </div>
-        </form>
+    <div class="container-fluid" id="main">
+        <div class="form-group" class="center">
+            <output id="outputLabel">Generate a random number between 0 and 50</output>
+            <form name="randomNum" class="center">
+                <div name="inputs">
+                    <label for="range">0</label>
+                    <input id="range" type="range" min="0" max="100" oninput="setSliderVal()">
+                    <label for="range">100</label>
+                </div>
+                <div name="button">
+                    <input class="btn btn-primary mb-2" type="button" value="Generate Random Number" onclick="rand()">
+                </div>
+                <output id="randomNumOutput">0</output>
+                <div name="buttontestinc">
+                    <input class="btn btn-primary mb-2" type="button" value="Increment" onclick="increment()">
+                </div>
+                <div name="buttontestdec">
+                    <input class="btn btn-primary mb-2" type="button" value="Decrement" onclick="decrement()">
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
@@ -41,12 +42,12 @@
             document.getElementById('randomNumOutput').innerHTML = x;
             console.log(x)
         }
-        function increment()
-        {
+
+        function increment() {
             document.getElementById('randomNumOutput').innerHTML = parseInt(document.getElementById('randomNumOutput').innerHTML) + 1;
         }
-        function decrement()
-        {
+
+        function decrement() {
             document.getElementById('randomNumOutput').innerHTML = parseInt(document.getElementById('randomNumOutput').innerHTML) - 1;
         }
 

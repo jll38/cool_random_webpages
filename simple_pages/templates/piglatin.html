@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container-fluid" id="main">
+    <h3>English to Pig Latin</h3>
+        <div class="form-group" class="center" name="Translate">
+            <form id="translator">
+                <textarea id="textbox" class="form-control" placeholder="Insert text that you want translated" rows="10"></textarea>
+                <input class="btn btn-primary" type="button" value="Translate" onclick="translate()">
+            </form>
+            <h3>Output:</h3>
+            <output id="translatedOutput"></output>
+        </div>
+    </div>
+    <script>
+        function translate() {
+
+        }
+    </script>
+
+{% endblock %}

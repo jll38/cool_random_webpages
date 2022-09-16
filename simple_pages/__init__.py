@@ -16,3 +16,10 @@ def randNum():
         return render_template('rand.html')
     except TemplateNotFound:
         abort(404)
+
+@simple_pages.route('/piglatin')
+def pigLatin():
+    try:
+        return render_template('piglatin.html')
+    except TemplateNotFound:
+        abort(404)
