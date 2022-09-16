@@ -18,6 +18,9 @@ nav{
     display:grid;
     place-items:center;
 }
+body{
+
+}
 @font-face {
   font-family: "WILD WORLD";
     src: url('/static/fonts/WILD WORLD.otf');
