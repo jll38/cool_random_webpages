@@ -31,16 +31,16 @@
         }
 
         function setSliderVal() {
-            let x = getSliderVal()
-            document.getElementById('outputLabel').innerHTML = "Generate a random number between 0 and " + x
-            console.log(x)
+            let x = getSliderVal();
+            document.getElementById('outputLabel').innerHTML = "Generate a random number between 0 and " + x;
+            console.log(x);
         }
 
         function rand() {
             let x = Math.round(Math.random() * getSliderVal());
             event.preventDefault();
             document.getElementById('randomNumOutput').innerHTML = x;
-            console.log(x)
+            console.log(x);
         }
 
         function increment() {

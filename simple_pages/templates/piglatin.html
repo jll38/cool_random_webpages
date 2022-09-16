@@ -6,16 +6,21 @@
         <div class="form-group" class="center" name="Translate">
             <form id="translator">
                 <textarea id="textbox" class="form-control" placeholder="Insert text that you want translated" rows="10"></textarea>
-                <input class="btn btn-primary" type="button" value="Translate" onclick="translate()">
+                <input class="btn btn-primary" type="button" value="Translate" onclick="translatePig()">
             </form>
             <h3>Output:</h3>
             <output id="translatedOutput"></output>
         </div>
     </div>
     <script>
-        function translate() {
-
+        function translatePig()
+        {
+            var text = document.getElementById('textbox').value;
+            console.log("English: " + text);
+            var words = text.split(".");
+            console.log("Array: " + words);
+            var finalTranslation
+            document.getElementById('translatedOutput').innerHTML = text;
         }
     </script>
-
 {% endblock %}
