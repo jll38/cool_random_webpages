@@ -37,7 +37,7 @@ h2{
 }
 body {
     margin:auto;
-    animation: fadeIn 0.5s;
+    animation: fadeIn 0.25s;
 }
 .subtext{
     font-family: "Prompt";
