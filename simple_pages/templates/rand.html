@@ -32,16 +32,17 @@
         //Retrieves current value of the slider
         function getSliderVal() {
             var slider = document.getElementById('range');
-            return slider.value
+            return Number.parseInt(slider.value)
         }
         //Modifies output element with the current slider value
         function setSliderVal() {
             let x = getSliderVal();
             document.getElementById('outputLabel').innerHTML = `Generate a random number between 0 and ${x}`;
-            console.log(x);
+            console.log(`Sliderval: ${x}`);
         }
         //Calculates random value in the range of 0 and the slider value
         function rand() {
+            console.log(`Sliderval: ${getSliderVal() + 1}`);
             let x = Math.round(Math.random() * (getSliderVal() + 1)); //
             event.preventDefault();
             document.getElementById('randomNumOutput').innerHTML = x;
