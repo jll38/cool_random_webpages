@@ -38,7 +38,7 @@
         }
         //Calculates random value in the range of 0 and the slider value
         function rand() {
-            let x = Math.round(Math.random() * getSliderVal());
+            let x = Math.round(Math.random() * (getSliderVal() + 1)); //
             event.preventDefault();
             document.getElementById('randomNumOutput').innerHTML = x;
             console.log(x);
