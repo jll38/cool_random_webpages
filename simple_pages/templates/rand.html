@@ -25,17 +25,18 @@
     </div>
 
     <script>
+        //Retrieves current value of the slider
         function getSliderVal() {
             var slider = document.getElementById('range');
             return slider.value
         }
-
+        //Modifies output element with the current slider value
         function setSliderVal() {
             let x = getSliderVal();
-            document.getElementById('outputLabel').innerHTML = "Generate a random number between 0 and " + x;
+            document.getElementById('outputLabel').innerHTML = `Generate a random number between 0 and ${x}`;
             console.log(x);
         }
-
+        //Calculates random value in the range of 0 and the slider value
         function rand() {
             let x = Math.round(Math.random() * getSliderVal());
             event.preventDefault();
