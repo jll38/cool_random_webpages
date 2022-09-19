@@ -52,10 +52,12 @@ body {
   0% { opacity: 0;}
   100% { opacity: 1; }
 }
+
 .main {
     padding-top:10em;
     padding-bottom:10em;
     background-color:#ebd7d5;
+
 }
 
 #outputLabel{
