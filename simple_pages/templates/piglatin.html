@@ -43,21 +43,21 @@
                 words[i] = words[i].toLowerCase();
                 endOfSentance = false;
                 console.log(words[i]);
-                if (words[i].includes('.')) {
-                    words[i] = words[i].substring(0, words[i].length - 1)
-                    endOfSentance = true;
+                if (words[i].includes('.')) { //Checks for a period at the end of the sentence.
+                    words[i] = words[i].substring(0, words[i].length - 1) //Removes the period
+                    endOfSentance = true;//Used to track that there was a period so it can be added back later
                 }
                 if (isVowel(words[i][0])) {
-                    result.push(`${words[i]}way`);
+                    result.push(`${words[i]}way`); //Vowel
                 } else if (twoCons(words[i])) {
                     let chars = words[i].substr(0, 2);
-                    result.push(words[i].substring(2) + chars + 'ay');
+                    result.push(words[i].substring(2) + chars + 'ay'); //Starts with two consonants
                 } else {
                     let chars = words[i].substring(0, 1);
-                    result.push(words[i].substring(1) + chars + 'ay');
+                    result.push(words[i].substring(1) + chars + 'ay'); //Starts with one consonant and a vowel
                 }
                 if (endOfSentance) {
-                    result.push(".");
+                    result.push("."); //adds the period back into the sentence.
                 }
             }
             return result.join(" ");
