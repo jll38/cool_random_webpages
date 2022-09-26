@@ -2,57 +2,74 @@
 {% block content %}
 
     <div class="container-fluid" id="main">
-    <h3>English to Pig Latin</h3>
-        <div class="form-group" class="center" name="Translate">
-            <form id="translator">
-                <textarea id="textbox" class="form-control" placeholder="Insert text that you want translated" rows="10"></textarea>
-                <input class="btn btn-primary" type="button" value="Translate" onclick="translatePig()">
-            </form>
-            <h3>Output:</h3>
-            <output id="translatedOutput"></output>
-        </div>
+        <header>
+
+            <h1>Piglatin Translator</h1>
+            <p style="text-align: center">Piglatin is a very... unique language to say the least. Not many people can
+                translate it, so theres the
+                solution :)<br>
+            </p>
+            <h3>Here's how it works:</h3>
+            <ol>
+                <li>If a word starts with a consonant and a vowel, the first letter of the word is placed at the end of
+                    the word, then "ay" is added.
+                </li>
+                <li>If a word starts with two consonants, the two consonants are placed at the end of the word, followed by "ay."
+                </li>
+                <li>If a word starts with a vowel add the word "way" at the end of the word.</li>
+            </ol>
+        </header>
+        <section id="translate">
+
+
+            <h3>English to Pig Latin</h3>
+            <div class="form-group" class="center" name="Translate">
+                <form id="translator">
+                    <textarea id="textbox" class="form-control" placeholder="Insert text that you want translated"
+                              rows="10"></textarea>
+                    <input class="btn btn-primary" type="button" value="Translate" onclick="translatePig()">
+                </form>
+                <h3>Output:</h3>
+                <output id="translatedOutput"></output>
+            </div>
+        </section>
     </div>
+
     <script>
-        function resultString(words){
-                let result = [];
-                let endOfSentance;
-                for(let i= 0; i < words.length; i++)
-                {
-                    words[i] = words[i].toLowerCase();
-                    endOfSentance = false;
-                        console.log(words[i]);
-                        if(words[i].includes('.'))
-                        {
-                            words[i] = words[i].substring(0,words[i].length-1)
-                            endOfSentance = true;
-                        }
-                        if(isVowel(words[i][0]))
-                        {
-                            result.push(`${words[i]}way`);
-                        }
-                        else if(twoCons(words[i]))
-                        {
-                            let chars = words[i].substr(0,2);
-                            result.push(words[i].substring(2) + chars + 'ay');
-                        }
-                        else
-                        {
-                            let chars = words[i].substring(0,1);
-                            result.push(words[i].substring(1) + chars + 'ay');
-                        }
-                        if(endOfSentance){
-                            result.push(".");
-                        }
+        function resultString(words) {
+            let result = [];
+            let endOfSentance;
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i].toLowerCase();
+                endOfSentance = false;
+                console.log(words[i]);
+                if (words[i].includes('.')) {
+                    words[i] = words[i].substring(0, words[i].length - 1)
+                    endOfSentance = true;
                 }
-                return result.join(" ");
+                if (isVowel(words[i][0])) {
+                    result.push(`${words[i]}way`);
+                } else if (twoCons(words[i])) {
+                    let chars = words[i].substr(0, 2);
+                    result.push(words[i].substring(2) + chars + 'ay');
+                } else {
+                    let chars = words[i].substring(0, 1);
+                    result.push(words[i].substring(1) + chars + 'ay');
+                }
+                if (endOfSentance) {
+                    result.push(".");
+                }
             }
-        let twoCons = input =>{//checks if a string starts with two consonants
-            if(!isVowel(input[0]) && !isVowel(input[1])){
+            return result.join(" ");
+        }
+
+        let twoCons = input => {//checks if a string starts with two consonants
+            if (!isVowel(input[0]) && !isVowel(input[1])) {
                 return true;
             }
         }
-        function translatePig()
-        {
+
+        function translatePig() {
             let resultArray = [];
 
             const text = document.getElementById('textbox').value;
@@ -65,12 +82,10 @@
             document.getElementById('translatedOutput').innerHTML = resultString(words);
         }
 
-        function isVowel(input){ //checks if input is a vowel
-            const vowels =['a','e','i','o','u']
-            for(let i = 0; i<vowels.length; i++)
-            {
-                if(input === vowels[i])
-                {
+        function isVowel(input) { //checks if input is a vowel
+            const vowels = ['a', 'e', 'i', 'o', 'u']
+            for (let i = 0; i < vowels.length; i++) {
+                if (input === vowels[i]) {
                     return true;
                     break;
                 }
