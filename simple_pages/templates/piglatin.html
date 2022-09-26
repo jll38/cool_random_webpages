@@ -13,14 +13,70 @@
         </div>
     </div>
     <script>
+        function resultString(words){
+                let result = [];
+                let endOfSentance;
+                for(let i= 0; i < words.length; i++)
+                {
+                    endOfSentance = false;
+                        console.log(words[i]);
+                        if(words[i].includes('.'))
+                        {
+                            words[i] = words.substring(0,words[i].length-1)
+                            endOfSentance = true;
+                        }
+                        if(isVowel(words[i][0]))
+                        {
+                            result.push(`${words[i]}way`);
+                        }
+                        else if(twoCons(words[i]))
+                        {
+                            let chars = words[i].substr(0,2);
+                            result.push(words[i].substring(2) + chars + 'ay');
+                        }
+                        else
+                        {
+                            let chars = words[i].substring(1);
+                            result.push(words[i].substring(1) + chars + 'ay');
+                        }
+                        if(endOfSentance){
+                            result.push(".");
+                        }
+                }
+                return result.join(" ");
+            }
+        let twoCons = input =>{//checks if a string starts with two consonants
+            if(!isVowel(input[0]) && !isVowel(input[1])){
+                return true;
+            }
+        }
         function translatePig()
         {
-            var text = document.getElementById('textbox').value;
+            let resultArray = [];
+
+            const text = document.getElementById('textbox').value;
             console.log(`English: ${text}`);
-            var words = text.split(".");
+            let words = text.split(" ");
             console.log(`Array: ${words}`);
-            var finalTranslation = "";
-            document.getElementById('translatedOutput').innerHTML = text;
+            console.log(words.length);
+
+
+            document.getElementById('translatedOutput').innerHTML = resultString(words);
         }
+
+        function isVowel(input){ //checks if input is a vowel
+            const vowels =['a','e','i','o','u']
+            for(let i = 0; i<vowels.length; i++)
+            {
+                if(input === vowels[i])
+                {
+                    return true;
+                    break;
+                }
+            }
+            return false;
+
+        }
+
     </script>
 {% endblock %}
