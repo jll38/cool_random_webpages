@@ -18,6 +18,7 @@
                 let endOfSentance;
                 for(let i= 0; i < words.length; i++)
                 {
+                    words[i] = words[i].toLowerCase();
                     endOfSentance = false;
                         console.log(words[i]);
                         if(words[i].includes('.'))
@@ -36,7 +37,7 @@
                         }
                         else
                         {
-                            let chars = words[i].substring(1);
+                            let chars = words[i].substring(0,1);
                             result.push(words[i].substring(1) + chars + 'ay');
                         }
                         if(endOfSentance){
