@@ -1,3 +1,39 @@
+/* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 767px) {
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+            #splash-text{
+        left:85%;
+        bottom:40px;
+        font-size: 16px;
+    }
+}
+/* tablets/desktops and up ———– */
+@media (min-width: 992px) and (max-width: 1199px) {
+        #splash-text{
+        left:75%;
+        bottom:40px;
+        font-size: 18px;
+    }
+}
+/* large desktops and up ———– */
+@media (min-width: 1200px) and (max-width: 1439px)  {
+    #splash-text{
+        left:70%;
+        bottom:40px;
+        font-size: 22px;
+    }
+
+}
+@media screen and (min-width: 1440px)  {
+    #splash-text{
+        left:68%;
+        bottom:40px;
+        font-size: 24px;
+    }
+
+}
 header {
 }
 
@@ -47,6 +83,7 @@ header {
 .mc-splash-text {
     font-family: Minecraftia-Regular;
     color: yellow;
+    text-align:center;
     text-shadow: black 1px 1px 1px;
     font-size: 20px;
     animation-name: splash-text;
@@ -55,7 +92,7 @@ header {
     animation-iteration-count: infinite;
     position: relative;
     width: 25%;
-    left:875px;
+    left:75%;
     bottom:30px;
 
 
