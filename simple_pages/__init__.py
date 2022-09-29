@@ -23,3 +23,10 @@ def pigLatin():
         return render_template('piglatin.html')
     except TemplateNotFound:
         abort(404)
+
+@simple_pages.route('/calculator')
+def calc():
+    try:
+        return render_template('calc.html')
+    except TemplateNotFound:
+        abort(404)

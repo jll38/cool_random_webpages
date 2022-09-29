@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container-fluid" id="main" style="">
+        <header style="min-height: 1em;">
+
+            <h1>Calculator</h1>
+            <p style="text-align: center">Pretty self explanatory</p>
+
+        </header>
+        <section id="calculator-area">
+            <div style="border: solid red 1px;padding:0px;" class="center w-25 h-100" name="calc-body">
+                <div style="background-color:gray; margin:0px; min-height: 50px;">
+
+                </div>
+                <div id="screen" style="min-height: 200px; background-color:black;">
+
+                </div>
+                <div id="base" style="min-height: 400px; border: solid blue 1px;">
+                    <div id="button-grid" name="button-grid">
+                        <div id="topgrid" class="grid-container" style="border: yellow solid 1px;">
+                            <div class="grid-item"><button class="btn-primary">C</button></div>
+                            <div class="grid-item">2</div>
+                            <div class="grid-item">3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+
+    </script>
+{% endblock %}
