@@ -91,8 +91,13 @@
             console.log(`Array: ${words}`);
             console.log(words.length);
 
-
-            document.getElementById('translatedOutput').innerHTML = resultString(words);
+            if((words === undefined || words.length == 1) && words[0] == "")
+            {
+                alert("Please input your text!");
+            }
+            else{
+                document.getElementById('translatedOutput').innerHTML = resultString(words);
+            }
         }
 
         function isVowel(input) { //checks if input is a vowel

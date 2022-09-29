@@ -3,11 +3,17 @@
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
-            #splash-text{
+
+    #splash-text{
         left:85%;
         bottom:40px;
         font-size: 16px;
     }
+    .container-fluid{
+        width:85%;
+
+    }
+
 }
 /* tablets/desktops and up ———– */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -15,6 +21,9 @@
         left:75%;
         bottom:40px;
         font-size: 18px;
+    }
+    body{
+        width:90%;
     }
 }
 /* large desktops and up ———– */
