@@ -7,9 +7,8 @@
                 <div style="border: yellow solid 1px; margin:10%">
                     <h1>Cool, Random, and Interesting Projects</h1>
                     <p class="subtext">Enjoy these little things I make on a whim</p>
-                    <div id="splash" style="position:relative; top:20px;">
-                        <p style="border:red solid 2px; font-family: Minecraftia-Regular; color:yellow; text-shadow:black 1px 1px 1px; right:30px;">
-                            Hello there!</p>
+                    <div id="splash" style="">
+                        <p class="mc-splash-text" id="splash-text"></p>
                     </div>
                 </div>
             </div>
@@ -18,5 +17,24 @@
 
 
     </section>
+    <script>
+        window.onload = () => {
+            document.getElementById('splash-text').innerHTML = splash();
 
+
+        }
+
+        function splash() {
+            const splashes = ['Do or do not, there is no try!',
+                'Hello There',
+                'Finger-licking good!',
+                '100% Free Range',
+                'pls rt']
+            let rand = Math.floor(Math.random() * splashes.length);
+            console.log(`Random Number ${rand}`);
+            console.log(`Splash: ${splashes[rand].toString()}`)
+            return splashes[rand].toString();
+        }
+
+    </script>
 {% endblock %}

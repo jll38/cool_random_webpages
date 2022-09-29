@@ -1,104 +1,156 @@
-header{
+header {
 }
 
 .center {
-  margin: auto;
+    margin: auto;
 }
+
 .vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
-.grid-center{
-    display:grid;
-    place-items:center;
+
+.grid-center {
+    display: grid;
+
 }
-.grid-container {
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  background-color: #2196F3;
-  padding: 10px;
+
+.calc-btn-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    place-items: stretch;
 }
+
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+    padding: 0px;
+    font-size: 30px;
+    text-align: center;
 }
+
+.calc-btn {
+    width: 100%;
+}
+
+.calc-btn-main, .grid-item-main {
+    height: 100%;
+    font-size: 35px;
+}
+
+.calc-btn:active {
+    background-color: gray;
+}
+
+.mc-splash-text {
+    font-family: Minecraftia-Regular;
+    color: yellow;
+    text-shadow: black 1px 1px 1px;
+    font-size: 20px;
+    animation-name: splash-text;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    position: relative;
+    width: 25%;
+    left:875px;
+    bottom:30px;
+
+
+
+}
+
+@keyframes splash-text {
+    from {
+        transform: scale(1) rotate(-15deg);
+    }
+    to {
+        transform: scale(1.15) rotate(-15deg);
+    }
+}
+
 @font-face {
-  font-family: "WILD WORLD";
+    font-family: "WILD WORLD";
     src: url('/static/fonts/WILD WORLD.otf');
 
 }
+
 @font-face {
-  font-family: "Minecraftia-Regular";
+    font-family: "Minecraftia-Regular";
     src: url('/static/fonts/Minecraftia-Regular.ttf');
 
 }
-h1{
+
+h1 {
     font-family: "WILD WORLD";
-    text-align:center;
-    font-size:250%;
+    text-align: center;
+    font-size: 250%;
     font-weight: normal;
-    color:white;
+    color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
 
-h2{
-    font-family:"WILD WORLD";
-    text-align:center;
+h2 {
+    font-family: "WILD WORLD";
+    text-align: center;
 
 }
 
 body {
-    margin:auto;
+    margin: auto;
 
     animation: fadeIn 0.25s;
 }
-.subtext{
+
+.subtext {
     font-family: "Prompt";
-    text-align:center;
-    font-size:200%;
+    text-align: center;
+    font-size: 200%;
     font-weight: normal;
 }
+
 @keyframes fadeIn {
-  0% { opacity: 0;}
-  100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .main {
-    padding-top:10em;
-    padding-bottom:10em;
-    background-color:#ebd7d5;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    background-color: #ebd7d5;
 
 }
 
-#outputLabel{
-    font-size:2em;
-    text-align:center;
+#outputLabel {
+    font-size: 2em;
+    text-align: center;
     font-family: "Prompt";
-    display:block;
+    display: block;
     animation: fadeIn 0.5s;
 
 }
 
-#randomNumOutput{
-    font-family:"Prompt";
-    font-size:3em;
+#randomNumOutput {
+    font-family: "Prompt";
+    font-size: 3em;
 }
-#randomNumOutput:active{
+
+#randomNumOutput:active {
     animation: fadeIn 0.5s;
 }
 
 
 .center {
-  margin: auto;
-  width: 50%;
-    display:block;
-  padding: 10px;
-    text-align:center;
+    margin: auto;
+    width: 50%;
+    display: block;
+    padding: 10px;
+    text-align: center;
 }
