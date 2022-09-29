@@ -21,6 +21,12 @@ body{
 @font-face {
   font-family: "WILD WORLD";
     src: url('/static/fonts/WILD WORLD.otf');
+
+}
+@font-face {
+  font-family: "Minecraftia-Regular";
+    src: url('/static/fonts/Minecraftia-Regular.ttf');
+
 }
 h1{
     font-family: "WILD WORLD";
@@ -68,6 +74,7 @@ body {
     animation: fadeIn 0.5s;
 
 }
+
 #randomNumOutput{
     font-family:"Prompt";
     font-size:3em;

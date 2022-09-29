@@ -36,6 +36,7 @@
     </div>
 
     <script>
+
         function resultString(words) {
             let result = [];
             let endOfSentance;
@@ -43,10 +44,13 @@
                 words[i] = words[i].toLowerCase();
                 endOfSentance = false;
                 console.log(words[i]);
+
+
                 if (words[i].includes('.')) { //Checks for a period at the end of the sentence.
                     words[i] = words[i].substring(0, words[i].length - 1) //Removes the period
                     endOfSentance = true;//Used to track that there was a period so it can be added back later
                 }
+
                 if (isVowel(words[i][0])) {
                     result.push(`${words[i]}way`); //Vowel
                 } else if (twoCons(words[i])) {
@@ -56,12 +60,21 @@
                     let chars = words[i].substring(0, 1);
                     result.push(words[i].substring(1) + chars + 'ay'); //Starts with one consonant and a vowel
                 }
+
+
                 if (endOfSentance) {
                     result.push("."); //adds the period back into the sentence.
                 }
             }
             return result.join(" ");
         }
+        {#function resultString(words){
+            let result = [];
+            words = words.map(word => {
+                return word.toLowerCase();
+            })
+
+        }#}
 
         let twoCons = input => {//checks if a string starts with two consonants
             if (!isVowel(input[0]) && !isVowel(input[1])) {
@@ -93,6 +106,7 @@
             return false;
 
         }
+
 
     </script>
 {% endblock %}
