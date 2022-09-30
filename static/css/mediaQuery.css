@@ -1,27 +1,13 @@
 /* Extra small devices (phones, up to 480px) */
-@media screen and (max-width: 767px) {.navbar{
-        font-size:250%;
-    }
-
+@media screen and (max-width: 767px) {
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
-
-    #splash-text{
+            #splash-text{
         left:85%;
         bottom:40px;
         font-size: 16px;
     }
-    .container-fluid{
-        text-align:center;
-    }
-    .navbar{
-        font-size:225%;
-    }
-    h2{
-        font-size:300%;
-    }
-
 }
 /* tablets/desktops and up ———– */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -30,15 +16,6 @@
         bottom:40px;
         font-size: 18px;
     }
-    body{
-    }
-    h1{
-        font-size:400%;
-    }
-    h2{
-        font-size:300%;
-    }
-
 }
 /* large desktops and up ———– */
 @media (min-width: 1200px) and (max-width: 1439px)  {
@@ -47,19 +24,23 @@
         bottom:40px;
         font-size: 22px;
     }
-    h2{
-        font-size:400%;
-    }
 
 }
-@media screen and (min-width: 1440px)  {
+@media (min-width: 1440px) and (max-width: 2159px)  {
     h1{
-        font-size:450%;
+        font-size:300%;
     }
     #splash-text{
-        left:68%;
+        left:65%;
         bottom:40px;
         font-size: 24px;
     }
 
+}
+@media (min-width:2160px) and (max-width: 4320px) {
+    #splash-text{
+        left:58%;
+        bottom:40px;
+        font-size: 24px;
+    }
 }
