@@ -51,10 +51,10 @@ header {
     font-family: Minecraftia-Regular;
     color: yellow;
     text-align:center;
-    text-shadow: black 1px 1px 1px;
+    text-shadow: black 2px 2px 2px;
     font-size: 20px;
     animation-name: splash-text;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     position: relative;
