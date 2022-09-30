@@ -18,6 +18,9 @@
     .navbar{
         font-size:225%;
     }
+    h2{
+        font-size:300%;
+    }
 
 }
 /* tablets/desktops and up ———– */
@@ -29,6 +32,12 @@
     }
     body{
     }
+    h1{
+        font-size:400%;
+    }
+    h2{
+        font-size:300%;
+    }
 
 }
 /* large desktops and up ———– */
@@ -38,11 +47,14 @@
         bottom:40px;
         font-size: 22px;
     }
+    h2{
+        font-size:400%;
+    }
 
 }
 @media screen and (min-width: 1440px)  {
     h1{
-        font-size:300%;
+        font-size:450%;
     }
     #splash-text{
         left:68%;
