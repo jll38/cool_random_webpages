@@ -9,6 +9,8 @@
     }
     .col-6{
         margin:auto;
+        width: 600px;
+        font-size:200%;
     }
 
 
@@ -25,7 +27,9 @@
     h1 {
         font-size: 300%;
     }
-
+    h3{
+        font-size:200%;
+    }
     .c-fill {
         transform: translateY(150%);
     }
@@ -46,7 +50,11 @@
     .navbar li {
         font-size: 200%;
     }
-
+    .col-6{
+        margin:auto;
+        width: 800px;
+        font-size:200%;
+    }
 }
 
 /* large desktops and up ———– */
@@ -59,6 +67,13 @@
 
     .c-fill {
         transform: translateY(125%);
+    }
+    .col-6{
+        margin:auto;
+        width: 1000px;
+        font-size:200%;
+        margin-top:20px;
+        margin-bottom:20px;
     }
 
 }

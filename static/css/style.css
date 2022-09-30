@@ -1,6 +1,4 @@
-*{
-    border:solid 1px red;
-}
+
 input[type="range"] {
          width:300px;
      }
@@ -9,6 +7,9 @@ header {
 
 .center {
     margin: auto;
+}
+.card{
+    border-radius:90%;
 }
 
 .vertical-center {
