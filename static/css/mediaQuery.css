@@ -26,14 +26,21 @@
     }
 
 }
-@media screen and (min-width: 1440px)  {
+@media (min-width: 1440px) and (max-width: 2159px)  {
     h1{
         font-size:300%;
     }
     #splash-text{
-        left:68%;
+        left:65%;
         bottom:40px;
         font-size: 24px;
     }
 
+}
+@media (min-width:2160px) and (max-width: 4320px) {
+    #splash-text{
+        left:58%;
+        bottom:40px;
+        font-size: 24px;
+    }
 }
