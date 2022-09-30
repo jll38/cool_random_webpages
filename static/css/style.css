@@ -117,8 +117,20 @@ body {
     text-align: center;
     font-size: 200%;
     font-weight: normal;
-}
+    color: white;
+    -webkit-text-stroke-width: .75px;
+    -webkit-text-stroke-color: black;
 
+}
+.img-circle{
+    border-radius:50%;
+}
+.img-tiny{
+    height:55px;
+}
+.black-border-thin{
+    border: black 1px solid;
+}
 @keyframes fadeIn {
     0% {
         opacity: 0;
