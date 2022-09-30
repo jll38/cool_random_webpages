@@ -4,6 +4,14 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
+    .row{
+      display:block;;
+    }
+    .col-6{
+        margin:auto;
+    }
+
+
     #splash-text {
         left: 85%;
         bottom: 40px;
