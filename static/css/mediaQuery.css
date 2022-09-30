@@ -1,5 +1,8 @@
 /* Extra small devices (phones, up to 480px) */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {.navbar{
+        font-size:250%;
+    }
+
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -10,8 +13,10 @@
         font-size: 16px;
     }
     .container-fluid{
-        width:85%;
-
+        text-align:center;
+    }
+    .navbar{
+        font-size:225%;
     }
 
 }
@@ -23,8 +28,8 @@
         font-size: 18px;
     }
     body{
-        width:90%;
     }
+
 }
 /* large desktops and up ———– */
 @media (min-width: 1200px) and (max-width: 1439px)  {
