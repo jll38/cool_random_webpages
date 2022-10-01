@@ -7,14 +7,22 @@
             <output id="outputLabel">Generate a random number between 0 and 100</output>
             <form name="randomNum" class="center">
                 <div name="inputs">
-                    <label for="min">Min</label>
-                    <input class="form-control" id="min" type="number" oninput="setVal()" value="0">
-                    <label for="max">Max</label>
-                    <input class="form-control"  id="max" type="number" oninput="setVal()" value="100">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="min">Min</label>
+                            <input class="form-control" id="min" type="number" oninput="setVal()" value="0">
+                        </div>
+                        <div class="col-6">
+                            <label for="max">Max</label>
+                            <input class="form-control" id="max" type="number" oninput="setVal()" value="100">
+                        </div>
+                    </div>
+                    <div name="button">
+                        <input class="btn btn-primary mb-2" type="button" value="Generate Random Number"
+                               onclick="rand()">
+                    </div>
                 </div>
-                <div name="button">
-                    <input class="btn btn-primary mb-2" type="button" value="Generate Random Number" onclick="rand()">
-                </div>
+
                 <output id="randomNumOutput">0</output>
             </form>
         </div>
@@ -31,6 +39,7 @@
             let max = document.getElementById('max');
             return Number.parseInt(max.value)
         }
+
         //Modifies output element with the current slider value
         function setVal() {
             let x = minVal();
@@ -39,19 +48,17 @@
 
             console.log(`Max: ${y}`);
         }
+
         //Calculates random value in the range of 0 and the slider value
         function rand() {
             console.log(`Min Val: ${minVal()}`);
             console.log(`Max Val: ${maxVal() + 1}`);
-            if(minVal() < maxVal())
-            {
+            if (minVal() < maxVal()) {
                 let x = Math.floor(Math.random() * (maxVal() - minVal() + 1) + minVal());
                 event.preventDefault();
                 document.getElementById('randomNumOutput').innerHTML = x;
                 console.log(x);
-            }
-            else
-            {
+            } else {
                 alert("Minimum Value cannot be above Maximum!");
             }
 
@@ -66,5 +73,5 @@
         }
 
     </script>
-</body>
+    </body>
 {% endblock %}

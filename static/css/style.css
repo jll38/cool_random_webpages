@@ -25,7 +25,9 @@ header {
     display: grid;
 
 }
-
+.form-control{
+    text-align:center;
+}
 .calc-btn-container {
     display: grid;
     grid-template-columns: auto auto auto;
