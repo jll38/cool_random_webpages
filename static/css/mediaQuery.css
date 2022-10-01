@@ -1,46 +1,111 @@
 /* Extra small devices (phones, up to 480px) */
 @media screen and (max-width: 767px) {
 }
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
-            #splash-text{
-        left:85%;
-        bottom:40px;
-        font-size: 16px;
+    .row{
+      display:block;;
+    }
+    .col-6{
+        margin:auto;
+        width: 600px;
+        font-size:200%;
+        margin-top:40px;
+        max-height:400px;
+        overflow:scroll;
+    }
+
+
+    #splash-text {
+        left: 85%;
+        bottom: 40px;
+        font-size: 24px;
+    }
+
+    .navbar li {
+        font-size: 250%;
+    }
+
+    h1 {
+        font-size: 300%;
+    }
+    h3{
+        font-size:200%;
+    }
+    .c-fill {
+        transform: translateY(150%);
+    }
+
+    input[type="range"] {
+
     }
 }
+
 /* tablets/desktops and up ———– */
 @media (min-width: 992px) and (max-width: 1199px) {
-        #splash-text{
-        left:75%;
-        bottom:40px;
-        font-size: 18px;
+    #splash-text {
+        left: 75%;
+        bottom: 40px;
+        font-size: 24px;
+    }
+
+    .navbar li {
+        font-size: 200%;
+    }
+    .col-6{
+        margin:auto;
+        width: 800px;
+        font-size:200%;
     }
 }
+
 /* large desktops and up ———– */
-@media (min-width: 1200px) and (max-width: 1439px)  {
-    #splash-text{
-        left:70%;
-        bottom:40px;
+@media (min-width: 1200px) and (max-width: 1439px) {
+    #splash-text {
+        left: 70%;
+        bottom: 40px;
         font-size: 22px;
     }
 
-}
-@media (min-width: 1440px) and (max-width: 2159px)  {
-    h1{
-        font-size:300%;
+    .c-fill {
+        transform: translateY(125%);
     }
-    #splash-text{
-        left:65%;
-        bottom:40px;
-        font-size: 24px;
+    .col-6{
+        margin:auto;
+        width: 1000px;
+        font-size:200%;
+        margin-top:30px;
+
     }
 
 }
-@media (min-width:2160px) and (max-width: 4320px) {
-    #splash-text{
-        left:58%;
-        bottom:40px;
+
+@media (min-width: 1440px) and (max-width: 2159px) {
+    h1 {
+        font-size: 300%;
+    }
+
+    #splash-text {
+        left: 65%;
+        bottom: 40px;
         font-size: 24px;
+    }
+
+    .c-fill {
+        transform: translateY(100%);
+    }
+
+}
+
+@media (min-width: 2160px) and (max-width: 4320px) {
+    #splash-text {
+        left: 58%;
+        bottom: 40px;
+        font-size: 24px;
+    }
+
+    .c-fill {
+        transform: translateY(90%);
     }
 }

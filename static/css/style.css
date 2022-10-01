@@ -1,9 +1,16 @@
 
+input[type="range"] {
+         width:300px;
+     }
 header {
 }
 
 .center {
     margin: auto;
+}
+.card{
+    border-radius:90%;
+    box-shadow: black 1px 1px 2px;
 }
 
 .vertical-center {
@@ -63,7 +70,10 @@ header {
 
 
 }
-
+.c-fill
+{
+    transform: translateY(80%);
+}
 @keyframes splash-text {
     from {
         transform: scale(1) rotate(-15deg);
@@ -106,14 +116,29 @@ body {
 
     animation: fadeIn 0.25s;
 }
+.navbar li{
+    font-size:150%;
+}
 
 .subtext {
     font-family: "Prompt";
     text-align: center;
     font-size: 200%;
     font-weight: normal;
-}
+    color: white;
+    -webkit-text-stroke-width: .75px;
+    -webkit-text-stroke-color: black;
 
+}
+.img-circle{
+    border-radius:50%;
+}
+.img-tiny{
+    height:55px;
+}
+.black-border-thin{
+    border: black 1px solid;
+}
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -124,8 +149,8 @@ body {
 }
 
 .main {
-    padding-top: 10em;
-    padding-bottom: 10em;
+    padding-top: 4em;
+    padding-bottom: 4em;
     background-color: #ebd7d5;
 
 }
