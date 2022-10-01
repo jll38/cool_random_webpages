@@ -4,46 +4,57 @@
 
     <div class="container-fluid" id="main">
         <div class="form-group c-fill">
-            <output id="outputLabel">Generate a random number between 0 and 50</output>
+            <output id="outputLabel">Generate a random number between 0 and 100</output>
             <form name="randomNum" class="center">
                 <div name="inputs">
-                    <label for="range">0</label>
-                    <input id="range" type="range" min="0" max="100" oninput="setSliderVal()">
-                    <label for="range">100</label>
+                    <label for="min">Min</label>
+                    <input id="min" type="number" oninput="setVal()" value="0">
+                    <label for="max">Max</label>
+                    <input id="max" type="number" oninput="setVal()" value="100">
                 </div>
                 <div name="button">
                     <input class="btn btn-primary mb-2" type="button" value="Generate Random Number" onclick="rand()">
                 </div>
                 <output id="randomNumOutput">0</output>
-                <div name="buttontestinc">
-                    <input class="btn btn-primary mb-2" type="button" value="Increment" onclick="increment()">
-                </div>
-                <div name="buttontestdec">
-                    <input class="btn btn-primary mb-2" type="button" value="Decrement" onclick="decrement()">
-                </div>
             </form>
         </div>
     </div>
 
     <script>
-        //Retrieves current value of the slider
-        function getSliderVal() {
-            var slider = document.getElementById('range');
-            return Number.parseInt(slider.value)
+        //Retrieves current value of the Min Value Input
+        const minVal = () => {
+            let min = document.getElementById('min');
+            return Number.parseInt(min.value)
+        }
+        //Retrieves current value of the Max Value Input
+        const maxVal = () => {
+            let max = document.getElementById('max');
+            return Number.parseInt(max.value)
         }
         //Modifies output element with the current slider value
-        function setSliderVal() {
-            let x = getSliderVal();
-            document.getElementById('outputLabel').innerHTML = `Generate a random number between 0 and ${x}`;
-            console.log(`Sliderval: ${x}`);
+        function setVal() {
+            let x = minVal();
+            let y = maxVal();
+            document.getElementById('outputLabel').innerHTML = `Generate a random number between ${x} and ${y}`;
+
+            console.log(`Max: ${y}`);
         }
         //Calculates random value in the range of 0 and the slider value
         function rand() {
-            console.log(`Sliderval: ${getSliderVal() + 1}`);
-            let x = Math.round(Math.random() * (getSliderVal() + 1)); //
-            event.preventDefault();
-            document.getElementById('randomNumOutput').innerHTML = x;
-            console.log(x);
+            console.log(`Min Val: ${minVal()}`);
+            console.log(`Max Val: ${maxVal() + 1}`);
+            if(minVal() < maxVal())
+            {
+                let x = Math.floor(Math.random() * (maxVal() - minVal() + 1) + minVal());
+                event.preventDefault();
+                document.getElementById('randomNumOutput').innerHTML = x;
+                console.log(x);
+            }
+            else
+            {
+                alert("Minimum Value cannot be above Maximum!");
+            }
+
         }
 
         function increment() {
