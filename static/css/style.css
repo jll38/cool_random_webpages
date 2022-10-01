@@ -10,6 +10,7 @@ header {
 }
 .card{
     border-radius:90%;
+    box-shadow: black 1px 1px 2px;
 }
 
 .vertical-center {
