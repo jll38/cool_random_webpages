@@ -70,10 +70,7 @@ header {
 
 
 }
-.c-fill
-{
-    transform: translateY(80%);
-}
+
 @keyframes splash-text {
     from {
         transform: scale(1) rotate(-15deg);

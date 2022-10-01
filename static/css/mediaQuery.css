@@ -33,9 +33,7 @@
     h3{
         font-size:200%;
     }
-    .c-fill {
-        transform: translateY(150%);
-    }
+
 
     input[type="range"] {
 
@@ -68,9 +66,6 @@
         font-size: 22px;
     }
 
-    .c-fill {
-        transform: translateY(125%);
-    }
     .col-6{
         margin:auto;
         width: 1000px;
@@ -92,9 +87,6 @@
         font-size: 24px;
     }
 
-    .c-fill {
-        transform: translateY(100%);
-    }
 
 }
 
@@ -105,7 +97,4 @@
         font-size: 24px;
     }
 
-    .c-fill {
-        transform: translateY(90%);
-    }
 }
