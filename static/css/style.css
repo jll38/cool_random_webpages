@@ -24,7 +24,7 @@ header {
     display: grid;
 
 }
-.form-control{
+#min,#max{
     text-align:center;
 }
 .calc-btn-container {
