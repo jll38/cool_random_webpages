@@ -21,6 +21,9 @@
                         <input class="btn btn-primary mb-2" type="button" value="Generate Random Number"
                                onclick="rand()">
                     </div>
+                    <div id="funnyOutput" class="center" style="font-family:Prompt;">
+
+                    </div>
                 </div>
 
                 <output id="randomNumOutput">0</output>
@@ -51,13 +54,26 @@
 
         //Calculates random value in the range of 0 and the slider value
         function rand() {
+            const remNice = document.getElementById('nice');
+            const roll = (remNice != null ? remNice.remove() : false);
+
             console.log(`Min Val: ${minVal()}`);
             console.log(`Max Val: ${maxVal() + 1}`);
-            if (minVal() < maxVal()) {
+            if (minVal() <= maxVal()) {
                 let x = Math.floor(Math.random() * (maxVal() - minVal() + 1) + minVal());
                 event.preventDefault();
-                document.getElementById('randomNumOutput').innerHTML = x;
                 console.log(x);
+                document.getElementById('randomNumOutput').innerHTML = x;
+                if(x == 69)
+                {
+                    console.log('nice.');
+                    const funnyOut = document.createElement("output");
+                    const node = document.createTextNode("nice.");
+                    funnyOut.appendChild(node);
+                    funnyOut.id="nice"
+                    const element = document.getElementById("funnyOutput");
+                    element.appendChild(funnyOut);
+                }
             } else {
                 alert("Minimum Value cannot be above Maximum!");
             }
