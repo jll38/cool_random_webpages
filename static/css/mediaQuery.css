@@ -11,8 +11,8 @@
         margin:auto;
         width: 600px;
         font-size:200%;
-        margin-top:40px;
-        max-height:400px;
+        margin-top:50px;
+        max-height:600px;
         overflow:scroll;
     }
 
@@ -67,11 +67,11 @@
     }
 
     .col-6{
-        margin:auto;
+        margin: 10px auto;
         width: 1000px;
         font-size:200%;
         margin-top:30px;
-
+        max-width:500px;
     }
 
 }
@@ -86,7 +86,9 @@
         bottom: 40px;
         font-size: 24px;
     }
-
+    .col-6{
+        max-width:700px;
+    }
 
 }
 
@@ -95,6 +97,9 @@
         left: 58%;
         bottom: 40px;
         font-size: 24px;
+    }
+    .col-6{
+        max-width:800px;
     }
 
 }

@@ -4,7 +4,6 @@ input[type="range"] {
      }
 header {
 }
-
 .center {
     margin: auto;
 }
@@ -151,7 +150,7 @@ body {
     padding-top: 4em;
     padding-bottom: 4em;
     background-color: CornflowerBlue;
-
+    min-height:300px;
 }
 
 #outputLabel {
@@ -179,4 +178,7 @@ body {
     display: block;
     padding: 10px;
     text-align: center;
+}
+.col-6{
+        margin-top:30px !important;
 }
